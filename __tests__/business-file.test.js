@@ -1,11 +1,9 @@
-import Triangle from './../src/business-file.js';
+import Game from './../src/business-file.js';
 
-describe('Triangle', () => {
+describe('Game', () => {
 
-  test('should correctly create a triangle object with three lengths', () => {
-    const triangle = new Triangle(2,4,5);
-    expect(triangle.side1).toEqual(2);
-    expect(triangle.side2).toEqual(4);
-    expect(triangle.side3).toEqual(5);
+  test('should correctly create Game object with a player property', () => {
+    const testGame = new Game(["player1", "player2"]);
+    expect(testGame.players).toEqual(["player1", "player2"]);
   });
 });
